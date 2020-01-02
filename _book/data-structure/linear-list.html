@@ -1,0 +1,791 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>线性表 · record and improve</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zxp">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="stack-queue.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    
+        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zxpei/record","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/zxpei/record" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">data-structure</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="linear-list.html">
+            
+                <a href="linear-list.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    线性表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="stack-queue.html">
+            
+                <a href="stack-queue.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    栈和队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="tree.html">
+            
+                <a href="tree.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="tree/tree-introduction.html">
+            
+                <a href="tree/tree-introduction.html">
+            
+                    
+                        <b>2.3.1.</b>
+                    
+                    树的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="tree/other-tree.html">
+            
+                <a href="tree/other-tree.html">
+            
+                    
+                        <b>2.3.2.</b>
+                    
+                    其他常见的树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="tree/Union-Find.html">
+            
+                <a href="tree/Union-Find.html">
+            
+                    
+                        <b>2.3.3.</b>
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="tree/b-tree.html">
+            
+                <a href="tree/b-tree.html">
+            
+                    
+                        <b>2.3.4.</b>
+                    
+                    B-树，B+树，B*树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="graph.html">
+            
+                <a href="graph.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="graph/graph-introduction.html">
+            
+                <a href="graph/graph-introduction.html">
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    图的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="graph/topology.html">
+            
+                <a href="graph/topology.html">
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="graph/Kruskal.html">
+            
+                <a href="graph/Kruskal.html">
+            
+                    
+                        <b>2.4.3.</b>
+                    
+                    Kruskal算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="graph/Prim.html">
+            
+                <a href="graph/Prim.html">
+            
+                    
+                        <b>2.4.4.</b>
+                    
+                    Prim算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="graph/Dijkstra.html">
+            
+                <a href="graph/Dijkstra.html">
+            
+                    
+                        <b>2.4.5.</b>
+                    
+                    Dijkstra算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="graph/Floyd.html">
+            
+                <a href="graph/Floyd.html">
+            
+                    
+                        <b>2.4.6.</b>
+                    
+                    Floyd算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="hash.html">
+            
+                <a href="hash.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    散列查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="sort.html">
+            
+                <a href="sort.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="mass_data_processing.html">
+            
+                <a href="mass_data_processing.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    海量数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">data base</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../sql/SQL.html">
+            
+                <a href="../sql/SQL.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >线性表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6982;&#x8981;"><a name="&#x6982;&#x8981;" class="plugin-anchor" href="#&#x6982;&#x8981;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x8981;</h2>
+<p>&#x7EBF;&#x6027;&#x8868;&#x662F;&#x4E00;&#x79CD;&#x7EBF;&#x6027;&#x7ED3;&#x6784;&#xFF0C;&#x5B83;&#x662F;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;n(n&#x2265;0)&#x4E2A;&#x6570;&#x636E;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x6709;&#x9650;&#x5E8F;&#x5217;&#x3002;&#x672C;&#x7AE0;&#x5148;&#x4ECB;&#x7ECD;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x51E0;&#x4E2A;&#x57FA;&#x672C;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF1A;&#x6570;&#x7EC4;&#x3001;&#x5355;&#x5411;&#x94FE;&#x8868;&#x3001;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x3002;</p>
+<h2 id="&#x6570;&#x7EC4;"><a name="&#x6570;&#x7EC4;" class="plugin-anchor" href="#&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;</h2>
+<p>&#x6570;&#x7EC4;&#x6709;&#x4E0A;&#x754C;&#x548C;&#x4E0B;&#x754C;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x5728;&#x4E0A;&#x4E0B;&#x754C;&#x5185;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#x3002;</p>
+<p>&#x5B58;&#x50A8;10,20,30,40,50&#x7684;&#x6570;&#x7EC4;&#x7684;&#x793A;&#x610F;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><a href="http://images.cnitblog.com/blog/497634/201402/231243264043298.jpg" target="_blank"><img src="http://images.cnitblog.com/blog/497634/201402/231243264043298.jpg" alt="img"></a></p>
+<p>&#x6570;&#x7EC4;&#x7684;&#x7279;&#x70B9;&#x662F;&#xFF1A;&#x6570;&#x636E;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF1B;&#x968F;&#x673A;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;&#x5FEB;&#x3002;
+&#x6570;&#x7EC4;&#x4E2D;&#x7A0D;&#x5FAE;&#x590D;&#x6742;&#x4E00;&#x70B9;&#x7684;&#x662F;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x548C;&#x52A8;&#x6001;&#x6570;&#x7EC4;&#x3002;&#x5BF9;&#x4E8E;C&#x8BED;&#x8A00;&#x800C;&#x8A00;&#xFF0C;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x672C;&#x8D28;&#x4E0A;&#x4E5F;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x81F3;&#x4E8E;&#x52A8;&#x6001;&#x6570;&#x7EC4;&#xFF0C;&#x662F;&#x6307;&#x6570;&#x7EC4;&#x7684;&#x5BB9;&#x91CF;&#x80FD;&#x52A8;&#x6001;&#x589E;&#x957F;&#x7684;&#x6570;&#x7EC4;&#xFF1B;&#x5BF9;&#x4E8E;C&#x8BED;&#x8A00;&#x800C;&#x8A00;&#xFF0C;&#x82E5;&#x8981;&#x63D0;&#x4F9B;&#x52A8;&#x6001;&#x6570;&#x7EC4;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5B9E;&#x73B0;&#xFF1B;&#x800C;&#x5BF9;&#x4E8E;C++&#x800C;&#x8A00;&#xFF0C;STL&#x63D0;&#x4F9B;&#x4E86;Vector&#xFF1B;&#x5BF9;&#x4E8E;Java&#x800C;&#x8A00;&#xFF0C;Collection&#x96C6;&#x5408;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;ArrayList&#x548C;Vector&#x3002;</p>
+<h2 id="&#x5355;&#x5411;&#x94FE;&#x8868;"><a name="&#x5355;&#x5411;&#x94FE;&#x8868;" class="plugin-anchor" href="#&#x5355;&#x5411;&#x94FE;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x5411;&#x94FE;&#x8868;</h2>
+<p>&#x5355;&#x5411;&#x94FE;&#x8868;(&#x5355;&#x94FE;&#x8868;)&#x662F;&#x94FE;&#x8868;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x5B83;&#x7531;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x5305;&#x542B;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x6307;&#x9488;&#x3002;</p>
+<p>&#x5355;&#x94FE;&#x8868;&#x7684;&#x793A;&#x610F;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;
+<a href="http://images.cnitblog.com/blog/497634/201402/231244591436996.jpg" target="_blank"><img src="http://images.cnitblog.com/blog/497634/201402/231244591436996.jpg" alt="img"></a></p>
+<p>&#x8868;&#x5934;&#x4E3A;&#x7A7A;&#xFF0C;&#x8868;&#x5934;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x662F;&quot;&#x8282;&#x70B9;10&quot;(&#x6570;&#x636E;&#x4E3A;10&#x7684;&#x8282;&#x70B9;)&#xFF0C;&quot;&#x8282;&#x70B9;10&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x662F;&quot;&#x8282;&#x70B9;20&quot;(&#x6570;&#x636E;&#x4E3A;10&#x7684;&#x8282;&#x70B9;)&#xFF0C;...</p>
+<p><strong>&#x5355;&#x94FE;&#x8868;&#x5220;&#x9664;&#x8282;&#x70B9;</strong></p>
+<p><a href="http://images.cnitblog.com/blog/497634/201402/231246130639479.jpg" target="_blank"><img src="http://images.cnitblog.com/blog/497634/201402/231246130639479.jpg" alt="img"></a></p>
+<p>&#x5220;&#x9664;&quot;&#x8282;&#x70B9;30&quot;</p>
+<p><strong>&#x5220;&#x9664;&#x4E4B;&#x524D;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;20&quot; &#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;30&quot;&#xFF0C;&#x800C;&quot;&#x8282;&#x70B9;30&quot; &#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;40&quot;&#x3002;</p>
+<p><strong>&#x5220;&#x9664;&#x4E4B;&#x540E;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;20&quot; &#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;40&quot;&#x3002;</p>
+<p><strong>&#x5355;&#x94FE;&#x8868;&#x6DFB;&#x52A0;&#x8282;&#x70B9;</strong></p>
+<p><a href="http://images.cnitblog.com/blog/497634/201402/231246431888916.jpg" target="_blank"><img src="http://images.cnitblog.com/blog/497634/201402/231246431888916.jpg" alt="img"></a></p>
+<p>&#x5728;&quot;&#x8282;&#x70B9;10&quot;&#x4E0E;&quot;&#x8282;&#x70B9;20&quot;&#x4E4B;&#x95F4;&#x6DFB;&#x52A0;&quot;&#x8282;&#x70B9;15&quot;</p>
+<p><strong>&#x6DFB;&#x52A0;&#x4E4B;&#x524D;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;10&quot; &#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;20&quot;&#x3002;</p>
+<p><strong>&#x6DFB;&#x52A0;&#x4E4B;&#x540E;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;10&quot; &#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;15&quot;&#xFF0C;&#x800C;&quot;&#x8282;&#x70B9;15&quot; &#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;20&quot;&#x3002;</p>
+<p>&#x5355;&#x94FE;&#x8868;&#x7684;&#x7279;&#x70B9;&#x662F;&#xFF1A;&#x8282;&#x70B9;&#x7684;&#x94FE;&#x63A5;&#x65B9;&#x5411;&#x662F;&#x5355;&#x5411;&#x7684;&#xFF1B;&#x76F8;&#x5BF9;&#x4E8E;&#x6570;&#x7EC4;&#x6765;&#x8BF4;&#xFF0C;&#x5355;&#x94FE;&#x8868;&#x7684;&#x7684;&#x968F;&#x673A;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;&#x8F83;&#x6162;&#xFF0C;&#x4F46;&#x662F;&#x5355;&#x94FE;&#x8868;&#x5220;&#x9664;/&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x7684;&#x6548;&#x7387;&#x5F88;&#x9AD8;&#x3002;</p>
+<h2 id="&#x53CC;&#x5411;&#x94FE;&#x8868;"><a name="&#x53CC;&#x5411;&#x94FE;&#x8868;" class="plugin-anchor" href="#&#x53CC;&#x5411;&#x94FE;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53CC;&#x5411;&#x94FE;&#x8868;</h2>
+<p>&#x53CC;&#x5411;&#x94FE;&#x8868;(&#x53CC;&#x94FE;&#x8868;)&#x662F;&#x94FE;&#x8868;&#x7684;&#x4E00;&#x79CD;&#x3002;&#x548C;&#x5355;&#x94FE;&#x8868;&#x4E00;&#x6837;&#xFF0C;&#x53CC;&#x94FE;&#x8868;&#x4E5F;&#x662F;&#x7531;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#xFF0C;&#x5B83;&#x7684;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x70B9;&#x4E2D;&#x90FD;&#x6709;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x5206;&#x522B;&#x6307;&#x5411;&#x76F4;&#x63A5;&#x540E;&#x7EE7;&#x548C;&#x76F4;&#x63A5;&#x524D;&#x9A71;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4ECE;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x8BBF;&#x95EE;&#x5B83;&#x7684;&#x524D;&#x9A71;&#x7ED3;&#x70B9;&#x548C;&#x540E;&#x7EE7;&#x7ED3;&#x70B9;&#x3002;&#x4E00;&#x822C;&#x6211;&#x4EEC;&#x90FD;&#x6784;&#x9020;&#x53CC;&#x5411;&#x5FAA;&#x73AF;&#x94FE;&#x8868;&#x3002;</p>
+<p>&#x53CC;&#x94FE;&#x8868;&#x7684;&#x793A;&#x610F;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><a href="http://images.cnitblog.com/blog/497634/201402/231247423393589.jpg" target="_blank"><img src="http://images.cnitblog.com/blog/497634/201402/231247423393589.jpg" alt="img"></a></p>
+<p>&#x8868;&#x5934;&#x4E3A;&#x7A7A;&#xFF0C;&#x8868;&#x5934;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;10&quot;(&#x6570;&#x636E;&#x4E3A;10&#x7684;&#x8282;&#x70B9;)&#xFF1B;&quot;&#x8282;&#x70B9;10&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x662F;&quot;&#x8282;&#x70B9;20&quot;(&#x6570;&#x636E;&#x4E3A;10&#x7684;&#x8282;&#x70B9;)&#xFF0C;&quot;&#x8282;&#x70B9;20&quot;&#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x662F;&quot;&#x8282;&#x70B9;10&quot;&#xFF1B;&quot;&#x8282;&#x70B9;20&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x662F;&quot;&#x8282;&#x70B9;30&quot;&#xFF0C;&quot;&#x8282;&#x70B9;30&quot;&#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x662F;&quot;&#x8282;&#x70B9;20&quot;&#xFF1B;...&#xFF1B;&#x672B;&#x5C3E;&#x8282;&#x70B9;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x662F;&#x8868;&#x5934;&#x3002;</p>
+<p><strong>&#x53CC;&#x94FE;&#x8868;&#x5220;&#x9664;&#x8282;&#x70B9;</strong></p>
+<p><a href="http://images.cnitblog.com/blog/497634/201402/231248185524615.jpg" target="_blank"><img src="http://images.cnitblog.com/blog/497634/201402/231248185524615.jpg" alt="img"></a></p>
+<p>&#x5220;&#x9664;&quot;&#x8282;&#x70B9;30&quot;</p>
+<p><strong>&#x5220;&#x9664;&#x4E4B;&#x524D;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;20&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;30&quot;&#xFF0C;&quot;&#x8282;&#x70B9;30&quot; &#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;20&quot;&#x3002;&quot;&#x8282;&#x70B9;30&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;40&quot;&#xFF0C;&quot;&#x8282;&#x70B9;40&quot; &#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;30&quot;&#x3002;</p>
+<p><strong>&#x5220;&#x9664;&#x4E4B;&#x540E;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;20&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;40&quot;&#xFF0C;&quot;&#x8282;&#x70B9;40&quot; &#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;20&quot;&#x3002;</p>
+<p> <strong>&#x53CC;&#x94FE;&#x8868;&#x6DFB;&#x52A0;&#x8282;&#x70B9;</strong></p>
+<p><a href="http://images.cnitblog.com/i/497634/201403/241342164043381.jpg" target="_blank"><img src="http://images.cnitblog.com/i/497634/201403/241342164043381.jpg" alt="img"></a></p>
+<p>&#x5728;&quot;&#x8282;&#x70B9;10&quot;&#x4E0E;&quot;&#x8282;&#x70B9;20&quot;&#x4E4B;&#x95F4;&#x6DFB;&#x52A0;&quot;&#x8282;&#x70B9;15&quot;</p>
+<p><strong>&#x6DFB;&#x52A0;&#x4E4B;&#x524D;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;10&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;20&quot;&#xFF0C;&quot;&#x8282;&#x70B9;20&quot; &#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;10&quot;&#x3002;</p>
+<p><strong>&#x6DFB;&#x52A0;&#x4E4B;&#x540E;</strong>&#xFF1A;&quot;&#x8282;&#x70B9;10&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;15&quot;&#xFF0C;&quot;&#x8282;&#x70B9;15&quot; &#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;10&quot;&#x3002;&quot;&#x8282;&#x70B9;15&quot;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;20&quot;&#xFF0C;&quot;&#x8282;&#x70B9;20&quot; &#x7684;&#x524D;&#x7EE7;&#x8282;&#x70B9;&#x4E3A;&quot;&#x8282;&#x70B9;15&quot;&#x3002;</p>
+<h2 id="&#x53CC;&#x94FE;&#x8868;&#x7684;java&#x5B9E;&#x73B0;"><a name="&#x53CC;&#x94FE;&#x8868;&#x7684;java&#x5B9E;&#x73B0;" class="plugin-anchor" href="#&#x53CC;&#x94FE;&#x8868;&#x7684;java&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53CC;&#x94FE;&#x8868;&#x7684;Java&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * Java &#x5B9E;&#x73B0;&#x7684;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x3002; 
+ * &#x6CE8;&#xFF1A;java&#x81EA;&#x5E26;&#x7684;&#x96C6;&#x5408;&#x5305;&#x4E2D;&#x6709;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x94FE;&#x8868;&#xFF0C;&#x8DEF;&#x5F84;&#x662F;:java.util.LinkedList
+ *
+ * <span class="hljs-doctag">@author</span> skywang
+ * <span class="hljs-doctag">@date</span> 2013/11/07
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoubleLink</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+
+    <span class="hljs-comment">// &#x8868;&#x5934;</span>
+    <span class="hljs-keyword">private</span> DNode&lt;T&gt; mHead;
+    <span class="hljs-comment">// &#x8282;&#x70B9;&#x4E2A;&#x6570;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mCount;
+
+    <span class="hljs-comment">// &#x53CC;&#x5411;&#x94FE;&#x8868;&#x201C;&#x8282;&#x70B9;&#x201D;&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x6784;&#x4F53;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DNode</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+        <span class="hljs-keyword">public</span> DNode prev;
+        <span class="hljs-keyword">public</span> DNode next;
+        <span class="hljs-keyword">public</span> T value;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DNode</span><span class="hljs-params">(T value, DNode prev, DNode next)</span> </span>{
+            <span class="hljs-keyword">this</span>.value = value;
+            <span class="hljs-keyword">this</span>.prev = prev;
+            <span class="hljs-keyword">this</span>.next = next;
+        }
+    }
+
+    <span class="hljs-comment">// &#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DoubleLink</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x201C;&#x8868;&#x5934;&#x201D;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x8868;&#x5934;&#x6CA1;&#x6709;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF01;</span>
+        mHead = <span class="hljs-keyword">new</span> DNode&lt;T&gt;(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>);
+        mHead.prev = mHead.next = mHead;
+        <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;&#x201C;&#x8282;&#x70B9;&#x4E2A;&#x6570;&#x201D;&#x4E3A;0</span>
+        mCount = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x6570;&#x76EE;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> mCount;
+    }
+
+    <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x94FE;&#x8868;&#x662F;&#x5426;&#x4E3A;&#x7A7A;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isEmpty</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> mCount==<span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7B2C;index&#x4F4D;&#x7F6E;&#x7684;&#x8282;&#x70B9;</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> DNode&lt;T&gt; <span class="hljs-title">getNode</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">if</span> (index&lt;<span class="hljs-number">0</span> || index&gt;=mCount)
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IndexOutOfBoundsException();
+
+        <span class="hljs-comment">// &#x6B63;&#x5411;&#x67E5;&#x627E;</span>
+        <span class="hljs-keyword">if</span> (index &lt;= mCount/<span class="hljs-number">2</span>) {
+            DNode&lt;T&gt; node = mHead.next;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;index; i++)
+                node = node.next;
+
+            <span class="hljs-keyword">return</span> node;
+        }
+
+        <span class="hljs-comment">// &#x53CD;&#x5411;&#x67E5;&#x627E;</span>
+        DNode&lt;T&gt; rnode = mHead.prev;
+        <span class="hljs-keyword">int</span> rindex = mCount - index -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;rindex; j++)
+            rnode = rnode.prev;
+
+        <span class="hljs-keyword">return</span> rnode;
+    }
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7B2C;index&#x4F4D;&#x7F6E;&#x7684;&#x8282;&#x70B9;&#x7684;&#x503C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">get</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">return</span> getNode(index).value;
+    }
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7B2C;1&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">getFirst</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> getNode(<span class="hljs-number">0</span>).value;
+    }
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">getLast</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> getNode(mCount-<span class="hljs-number">1</span>).value;
+    }
+
+    <span class="hljs-comment">// &#x5C06;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;&#x7B2C;index&#x4F4D;&#x7F6E;&#x4E4B;&#x524D;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index, T t)</span> </span>{
+        <span class="hljs-keyword">if</span> (index==<span class="hljs-number">0</span>) {
+            DNode&lt;T&gt; node = <span class="hljs-keyword">new</span> DNode&lt;T&gt;(t, mHead, mHead.next);
+            mHead.next.prev = node;
+            mHead.next = node;
+            mCount++;
+            <span class="hljs-keyword">return</span> ;
+        }
+
+        DNode&lt;T&gt; inode = getNode(index);
+        DNode&lt;T&gt; tnode = <span class="hljs-keyword">new</span> DNode&lt;T&gt;(t, inode.prev, inode);
+        inode.prev.next = tnode;
+        inode.prev = tnode;
+        mCount++;
+        <span class="hljs-keyword">return</span> ;
+    }
+
+    <span class="hljs-comment">// &#x5C06;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5904;&#x3002;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insertFirst</span><span class="hljs-params">(T t)</span> </span>{
+        insert(<span class="hljs-number">0</span>, t);
+    }
+
+    <span class="hljs-comment">// &#x5C06;&#x8282;&#x70B9;&#x8FFD;&#x52A0;&#x5230;&#x94FE;&#x8868;&#x7684;&#x672B;&#x5C3E;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">appendLast</span><span class="hljs-params">(T t)</span> </span>{
+        DNode&lt;T&gt; node = <span class="hljs-keyword">new</span> DNode&lt;T&gt;(t, mHead.prev, mHead);
+        mHead.prev.next = node;
+        mHead.prev = node;
+        mCount++;
+    }
+
+    <span class="hljs-comment">// &#x5220;&#x9664;index&#x4F4D;&#x7F6E;&#x7684;&#x8282;&#x70B9;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">del</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        DNode&lt;T&gt; inode = getNode(index);
+        inode.prev.next = inode.next;
+        inode.next.prev = inode.prev;
+        inode = <span class="hljs-keyword">null</span>;
+        mCount--;
+    }
+
+    <span class="hljs-comment">// &#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteFirst</span><span class="hljs-params">()</span> </span>{
+        del(<span class="hljs-number">0</span>);
+    }
+
+    <span class="hljs-comment">// &#x5220;&#x9664;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteLast</span><span class="hljs-params">()</span> </span>{
+        del(mCount-<span class="hljs-number">1</span>);
+    }
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ruheng.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modification Time&#xFF1A;
+2018-05-12 09:48:13
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="stack-queue.html" class="navigation navigation-next " aria-label="Next page: 栈和队">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"线性表","level":"2.1","depth":1,"next":{"title":"栈和队","level":"2.2","depth":1,"path":"data-structure/stack-queue.md","ref":"data-structure/stack-queue.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-livereload","search-plus@^0.0.11","github@^2.0.0","github-buttons@2.1.0","edit-link@^2.0.2","advanced-emoji@^0.2.1","anchors@^0.7.1","splitter@^0.0.8","tbfed-pagefooter@^0.0.1","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","favicon@^0.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © ruheng.com 2019","modify_label":"Modification Time：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/zxpei/record"},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"github-buttons":{"repo":"zxpei/record","types":["star"],"size":"small"},"expandable-chapters-small":{},"local-video":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/zxpei/record"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"zxp","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"record and improve","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"https://github.com/zxpei/record"}},"gitbook":"3.2.3","description":"up up up"},"file":{"path":"data-structure/linear-list.md","mtime":"2018-05-12T01:48:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-02T03:32:21.545Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

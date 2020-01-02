@@ -1,0 +1,722 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Dijkstra算法 · record and improve</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zxp">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Floyd.html" />
+    
+    
+    <link rel="prev" href="Prim.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zxpei/record","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/zxpei/record" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">data-structure</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../linear-list.html">
+            
+                <a href="../linear-list.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    线性表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../stack-queue.html">
+            
+                <a href="../stack-queue.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    栈和队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../tree.html">
+            
+                <a href="../tree.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../tree/tree-introduction.html">
+            
+                <a href="../tree/tree-introduction.html">
+            
+                    
+                        <b>2.3.1.</b>
+                    
+                    树的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../tree/other-tree.html">
+            
+                <a href="../tree/other-tree.html">
+            
+                    
+                        <b>2.3.2.</b>
+                    
+                    其他常见的树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../tree/Union-Find.html">
+            
+                <a href="../tree/Union-Find.html">
+            
+                    
+                        <b>2.3.3.</b>
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../tree/b-tree.html">
+            
+                <a href="../tree/b-tree.html">
+            
+                    
+                        <b>2.3.4.</b>
+                    
+                    B-树，B+树，B*树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../graph.html">
+            
+                <a href="../graph.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="graph-introduction.html">
+            
+                <a href="graph-introduction.html">
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    图的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="topology.html">
+            
+                <a href="topology.html">
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="Kruskal.html">
+            
+                <a href="Kruskal.html">
+            
+                    
+                        <b>2.4.3.</b>
+                    
+                    Kruskal算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="Prim.html">
+            
+                <a href="Prim.html">
+            
+                    
+                        <b>2.4.4.</b>
+                    
+                    Prim算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.5" data-path="Dijkstra.html">
+            
+                <a href="Dijkstra.html">
+            
+                    
+                        <b>2.4.5.</b>
+                    
+                    Dijkstra算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="Floyd.html">
+            
+                <a href="Floyd.html">
+            
+                    
+                        <b>2.4.6.</b>
+                    
+                    Floyd算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../hash.html">
+            
+                <a href="../hash.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    散列查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../sort.html">
+            
+                <a href="../sort.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../mass_data_processing.html">
+            
+                <a href="../mass_data_processing.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    海量数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">data base</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../sql/SQL.html">
+            
+                <a href="../../sql/SQL.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Dijkstra算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E00;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x4ECB;&#x7ECD;"><a name="&#x4E00;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x4ECB;&#x7ECD;</h2>
+<p>&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;(Dijkstra)&#x7B97;&#x6CD5;&#x662F;&#x5178;&#x578B;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7B97;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5230;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x3002; 
+&#x5B83;&#x7684;&#x4E3B;&#x8981;&#x7279;&#x70B9;&#x662F;&#x4EE5;&#x8D77;&#x59CB;&#x70B9;&#x4E3A;&#x4E2D;&#x5FC3;&#x5411;&#x5916;&#x5C42;&#x5C42;&#x6269;&#x5C55;(&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#x601D;&#x60F3;)&#xFF0C;&#x76F4;&#x5230;&#x6269;&#x5C55;&#x5230;&#x7EC8;&#x70B9;&#x4E3A;&#x6B62;&#x3002;</p>
+<p><strong>&#x57FA;&#x672C;&#x601D;&#x60F3;</strong></p>
+<p>&#x200B;     &#x901A;&#x8FC7;Dijkstra&#x8BA1;&#x7B97;&#x56FE;G&#x4E2D;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x8D77;&#x70B9;s(&#x5373;&#x4ECE;&#x9876;&#x70B9;s&#x5F00;&#x59CB;&#x8BA1;&#x7B97;)&#x3002;</p>
+<p>&#x200B;     &#x6B64;&#x5916;&#xFF0C;&#x5F15;&#x8FDB;&#x4E24;&#x4E2A;&#x96C6;&#x5408;S&#x548C;U&#x3002;S&#x7684;&#x4F5C;&#x7528;&#x662F;&#x8BB0;&#x5F55;&#x5DF2;&#x6C42;&#x51FA;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x9876;&#x70B9;(&#x4EE5;&#x53CA;&#x76F8;&#x5E94;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x957F;&#x5EA6;)&#xFF0C;&#x800C;U&#x5219;&#x662F;&#x8BB0;&#x5F55;&#x8FD8;&#x672A;&#x6C42;&#x51FA;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x9876;&#x70B9;(&#x4EE5;&#x53CA;&#x8BE5;&#x9876;&#x70B9;&#x5230;&#x8D77;&#x70B9;s&#x7684;&#x8DDD;&#x79BB;)&#x3002;</p>
+<p>&#x200B;     &#x521D;&#x59CB;&#x65F6;&#xFF0C;S&#x4E2D;&#x53EA;&#x6709;&#x8D77;&#x70B9;s&#xFF1B;U&#x4E2D;&#x662F;&#x9664;s&#x4E4B;&#x5916;&#x7684;&#x9876;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;U&#x4E2D;&#x9876;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x662F;&quot;&#x8D77;&#x70B9;s&#x5230;&#x8BE5;&#x9876;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&quot;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4ECE;U&#x4E2D;&#x627E;&#x51FA;&#x8DEF;&#x5F84;&#x6700;&#x77ED;&#x7684;&#x9876;&#x70B9;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#xFF1B;&#x63A5;&#x7740;&#xFF0C;&#x66F4;&#x65B0;U&#x4E2D;&#x7684;&#x9876;&#x70B9;&#x548C;&#x9876;&#x70B9;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;&#x3002; &#x7136;&#x540E;&#xFF0C;&#x518D;&#x4ECE;U&#x4E2D;&#x627E;&#x51FA;&#x8DEF;&#x5F84;&#x6700;&#x77ED;&#x7684;&#x9876;&#x70B9;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#xFF1B;&#x63A5;&#x7740;&#xFF0C;&#x66F4;&#x65B0;U&#x4E2D;&#x7684;&#x9876;&#x70B9;&#x548C;&#x9876;&#x70B9;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;&#x3002; ... &#x91CD;&#x590D;&#x8BE5;&#x64CD;&#x4F5C;&#xFF0C;&#x76F4;&#x5230;&#x904D;&#x5386;&#x5B8C;&#x6240;&#x6709;&#x9876;&#x70B9;&#x3002;</p>
+<p><strong>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</strong></p>
+<p><strong>(1)</strong> &#x521D;&#x59CB;&#x65F6;&#xFF0C;S&#x53EA;&#x5305;&#x542B;&#x8D77;&#x70B9;s&#xFF1B;U&#x5305;&#x542B;&#x9664;s&#x5916;&#x7684;&#x5176;&#x4ED6;&#x9876;&#x70B9;&#xFF0C;&#x4E14;U&#x4E2D;&#x9876;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#x4E3A;&quot;&#x8D77;&#x70B9;s&#x5230;&#x8BE5;&#x9876;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&quot;[&#x4F8B;&#x5982;&#xFF0C;U&#x4E2D;&#x9876;&#x70B9;v&#x7684;&#x8DDD;&#x79BB;&#x4E3A;(s,v)&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x7136;&#x540E;s&#x548C;v&#x4E0D;&#x76F8;&#x90BB;&#xFF0C;&#x5219;v&#x7684;&#x8DDD;&#x79BB;&#x4E3A;&#x221E;]&#x3002;</p>
+<p><strong>(2)</strong> &#x4ECE;U&#x4E2D;&#x9009;&#x51FA;&quot;&#x8DDD;&#x79BB;&#x6700;&#x77ED;&#x7684;&#x9876;&#x70B9;k&quot;&#xFF0C;&#x5E76;&#x5C06;&#x9876;&#x70B9;k&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x4ECE;U&#x4E2D;&#x79FB;&#x9664;&#x9876;&#x70B9;k&#x3002;</p>
+<p><strong>(3)</strong> &#x66F4;&#x65B0;U&#x4E2D;&#x5404;&#x4E2A;&#x9876;&#x70B9;&#x5230;&#x8D77;&#x70B9;s&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x4E4B;&#x6240;&#x4EE5;&#x66F4;&#x65B0;U&#x4E2D;&#x9876;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x662F;&#x7531;&#x4E8E;&#x4E0A;&#x4E00;&#x6B65;&#x4E2D;&#x786E;&#x5B9A;&#x4E86;k&#x662F;&#x6C42;&#x51FA;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x9876;&#x70B9;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x5229;&#x7528;k&#x6765;&#x66F4;&#x65B0;&#x5176;&#x5B83;&#x9876;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#xFF1B;&#x4F8B;&#x5982;&#xFF0C;(s,v)&#x7684;&#x8DDD;&#x79BB;&#x53EF;&#x80FD;&#x5927;&#x4E8E;(s,k)+(k,v)&#x7684;&#x8DDD;&#x79BB;&#x3002;</p>
+<p><strong>(4)</strong> &#x91CD;&#x590D;&#x6B65;&#x9AA4;(2)&#x548C;(3)&#xFF0C;&#x76F4;&#x5230;&#x904D;&#x5386;&#x5B8C;&#x6240;&#x6709;&#x9876;&#x70B9;&#x3002;</p>
+<p>&#x5355;&#x7EAF;&#x7684;&#x770B;&#x4E0A;&#x9762;&#x7684;&#x7406;&#x8BBA;&#x53EF;&#x80FD;&#x6BD4;&#x8F83;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#xFF0C;&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x6765;&#x5BF9;&#x8BE5;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;</p>
+<h2 id="&#x4E8C;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x56FE;&#x89E3;"><a name="&#x4E8C;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x56FE;&#x89E3;" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x56FE;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x56FE;&#x89E3;</h2>
+<p><img src="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/pictures/graph/dijkstra/01.jpg?raw=true&amp;_=3711516" alt=""></p>
+<p>&#x4EE5;&#x4E0A;&#x56FE;G4&#x4E3A;&#x4F8B;&#xFF0C;&#x6765;&#x5BF9;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x8FDB;&#x884C;&#x7B97;&#x6CD5;&#x6F14;&#x793A;(&#x4EE5;&#x7B2C;4&#x4E2A;&#x9876;&#x70B9;D&#x4E3A;&#x8D77;&#x70B9;)&#x3002;</p>
+<p><img src="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/pictures/graph/dijkstra/02.jpg?raw=true&amp;_=3711516" alt=""></p>
+<p><strong>&#x521D;&#x59CB;&#x72B6;&#x6001;</strong>&#xFF1A;S&#x662F;&#x5DF2;&#x8BA1;&#x7B97;&#x51FA;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x9876;&#x70B9;&#x96C6;&#x5408;&#xFF0C;U&#x662F;&#x672A;&#x8BA1;&#x7B97;&#x9664;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x9876;&#x70B9;&#x7684;&#x96C6;&#x5408;&#xFF01; </p>
+<p><strong>&#x7B2C;1&#x6B65;</strong>&#xFF1A;&#x5C06;&#x9876;&#x70B9;D&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#x3002; </p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#xFF0C;S={D(0)}, U={A(&#x221E;),B(&#x221E;),C(3),E(4),F(&#x221E;),G(&#x221E;)}&#x3002;     &#x6CE8;:C(3)&#x8868;&#x793A;C&#x5230;&#x8D77;&#x70B9;D&#x7684;&#x8DDD;&#x79BB;&#x662F;3&#x3002;</p>
+<p><strong>&#x7B2C;2&#x6B65;</strong>&#xFF1A;&#x5C06;&#x9876;&#x70B9;C&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#x3002; </p>
+<p>&#x200B;    &#x4E0A;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;U&#x4E2D;&#x9876;&#x70B9;C&#x5230;&#x8D77;&#x70B9;D&#x7684;&#x8DDD;&#x79BB;&#x6700;&#x77ED;&#xFF1B;&#x56E0;&#x6B64;&#xFF0C;&#x5C06;C&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x66F4;&#x65B0;U&#x4E2D;&#x9876;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x4EE5;&#x9876;&#x70B9;F&#x4E3A;&#x4F8B;&#xFF0C;&#x4E4B;&#x524D;F&#x5230;D&#x7684;&#x8DDD;&#x79BB;&#x4E3A;&#x221E;&#xFF1B;&#x4F46;&#x662F;&#x5C06;C&#x52A0;&#x5165;&#x5230;S&#x4E4B;&#x540E;&#xFF0C;F&#x5230;D&#x7684;&#x8DDD;&#x79BB;&#x4E3A;9=(F,C)+(C,D)&#x3002; </p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#xFF0C;S={D(0),C(3)}, U={A(&#x221E;),B(23),E(4),F(9),G(&#x221E;)}&#x3002;</p>
+<p><strong>&#x7B2C;3&#x6B65;</strong>&#xFF1A;&#x5C06;&#x9876;&#x70B9;E&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#x3002; </p>
+<p>&#x200B;    &#x4E0A;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;U&#x4E2D;&#x9876;&#x70B9;E&#x5230;&#x8D77;&#x70B9;D&#x7684;&#x8DDD;&#x79BB;&#x6700;&#x77ED;&#xFF1B;&#x56E0;&#x6B64;&#xFF0C;&#x5C06;E&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x66F4;&#x65B0;U&#x4E2D;&#x9876;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x8FD8;&#x662F;&#x4EE5;&#x9876;&#x70B9;F&#x4E3A;&#x4F8B;&#xFF0C;&#x4E4B;&#x524D;F&#x5230;D&#x7684;&#x8DDD;&#x79BB;&#x4E3A;9&#xFF1B;&#x4F46;&#x662F;&#x5C06;E&#x52A0;&#x5165;&#x5230;S&#x4E4B;&#x540E;&#xFF0C;F&#x5230;D&#x7684;&#x8DDD;&#x79BB;&#x4E3A;6=(F,E)+(E,D)&#x3002; </p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#xFF0C;S={D(0),C(3),E(4)}, U={A(&#x221E;),B(23),F(6),G(12)}&#x3002;</p>
+<p><strong>&#x7B2C;4&#x6B65;</strong>&#xFF1A;&#x5C06;&#x9876;&#x70B9;F&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#x3002; </p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#xFF0C;S={D(0),C(3),E(4),F(6)}, U={A(22),B(13),G(12)}&#x3002;</p>
+<p><strong>&#x7B2C;5&#x6B65;</strong>&#xFF1A;&#x5C06;&#x9876;&#x70B9;G&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#x3002; </p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#xFF0C;S={D(0),C(3),E(4),F(6),G(12)}, U={A(22),B(13)}&#x3002;</p>
+<p><strong>&#x7B2C;6&#x6B65;</strong>&#xFF1A;&#x5C06;&#x9876;&#x70B9;B&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#x3002; </p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#xFF0C;S={D(0),C(3),E(4),F(6),G(12),B(13)}, U={A(22)}&#x3002;</p>
+<p><strong>&#x7B2C;7&#x6B65;</strong>&#xFF1A;&#x5C06;&#x9876;&#x70B9;A&#x52A0;&#x5165;&#x5230;S&#x4E2D;&#x3002; </p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#xFF0C;S={D(0),C(3),E(4),F(6),G(12),B(13),A(22)}&#x3002;</p>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x8D77;&#x70B9;D&#x5230;&#x5404;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DDD;&#x79BB;&#x5C31;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x4E86;&#xFF1A;<strong>A(22) B(13) C(3) D(0) E(4) F(6) G(12)</strong>&#x3002;</p>
+<h2 id="&#x4E09;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#x8BF4;&#x660E;"><a name="&#x4E09;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x4E09;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#x8BF4;&#x660E;</h2>
+<p>&#x4EE5;&quot;&#x90BB;&#x63A5;&#x77E9;&#x9635;&quot;&#x4E3A;&#x4F8B;&#x5BF9;&#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;</p>
+<p><strong>1. &#x57FA;&#x672C;&#x5B9A;&#x4E49;</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatrixUDG</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mEdgNum;        <span class="hljs-comment">// &#x8FB9;&#x7684;&#x6570;&#x91CF;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">char</span>[] mVexs;       <span class="hljs-comment">// &#x9876;&#x70B9;&#x96C6;&#x5408;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] mMatrix;    <span class="hljs-comment">// &#x90BB;&#x63A5;&#x77E9;&#x9635;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> INF = Integer.MAX_VALUE;   <span class="hljs-comment">// &#x6700;&#x5927;&#x503C;</span>
+
+    ...
+}
+</code></pre>
+<p>MatrixUDG&#x662F;&#x90BB;&#x63A5;&#x77E9;&#x9635;&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x3002;mVexs&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x9876;&#x70B9;&#xFF0C;mEdgNum&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x8FB9;&#x6570;&#xFF0C;mMatrix&#x5219;&#x662F;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x77E9;&#x9635;&#x4FE1;&#x606F;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x3002;&#x4F8B;&#x5982;&#xFF0C;mMatrix[i][j]=1&#xFF0C;&#x5219;&#x8868;&#x793A;&quot;&#x9876;&#x70B9;i(&#x5373;mVexs[i])&quot;&#x548C;&quot;&#x9876;&#x70B9;j(&#x5373;mVexs[j])&quot;&#x662F;&#x90BB;&#x63A5;&#x70B9;&#xFF1B;mMatrix[i][j]=0&#xFF0C;&#x5219;&#x8868;&#x793A;&#x5B83;&#x4EEC;&#x4E0D;&#x662F;&#x90BB;&#x63A5;&#x70B9;&#x3002;</p>
+<p><strong>2. &#x8FEA;&#x6770;&#x65AF;&#x7279;&#x62C9;&#x7B97;&#x6CD5;</strong></p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+ * Dijkstra&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x3002;
+ * &#x5373;&#xFF0C;&#x7EDF;&#x8BA1;&#x56FE;&#x4E2D;&quot;&#x9876;&#x70B9;vs&quot;&#x5230;&#x5176;&#x5B83;&#x5404;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x3002;
+ *
+ * &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;
+ *       vs -- &#x8D77;&#x59CB;&#x9876;&#x70B9;(start vertex)&#x3002;&#x5373;&#x8BA1;&#x7B97;&quot;&#x9876;&#x70B9;vs&quot;&#x5230;&#x5176;&#x5B83;&#x9876;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x3002;
+ *     prev -- &#x524D;&#x9A71;&#x9876;&#x70B9;&#x6570;&#x7EC4;&#x3002;&#x5373;&#xFF0C;prev[i]&#x7684;&#x503C;&#x662F;&quot;&#x9876;&#x70B9;vs&quot;&#x5230;&quot;&#x9876;&#x70B9;i&quot;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x6240;&#x7ECF;&#x5386;&#x7684;&#x5168;&#x90E8;&#x9876;&#x70B9;&#x4E2D;&#xFF0C;&#x4F4D;&#x4E8E;&quot;&#x9876;&#x70B9;i&quot;&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E2A;&#x9876;&#x70B9;&#x3002;
+ *     dist -- &#x957F;&#x5EA6;&#x6570;&#x7EC4;&#x3002;&#x5373;&#xFF0C;dist[i]&#x662F;&quot;&#x9876;&#x70B9;vs&quot;&#x5230;&quot;&#x9876;&#x70B9;i&quot;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x957F;&#x5EA6;&#x3002;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dijkstra</span><span class="hljs-params">(<span class="hljs-keyword">int</span> vs, <span class="hljs-keyword">int</span>[] prev, <span class="hljs-keyword">int</span>[] dist)</span> </span>{
+    <span class="hljs-comment">// flag[i]=true&#x8868;&#x793A;&quot;&#x9876;&#x70B9;vs&quot;&#x5230;&quot;&#x9876;&#x70B9;i&quot;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x5DF2;&#x6210;&#x529F;&#x83B7;&#x53D6;</span>
+    <span class="hljs-keyword">boolean</span>[] flag = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[mVexs.length];
+
+    <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; mVexs.length; i++) {
+        flag[i] = <span class="hljs-keyword">false</span>;          <span class="hljs-comment">// &#x9876;&#x70B9;i&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x8FD8;&#x6CA1;&#x83B7;&#x53D6;&#x5230;&#x3002;</span>
+        prev[i] = <span class="hljs-number">0</span>;              <span class="hljs-comment">// &#x9876;&#x70B9;i&#x7684;&#x524D;&#x9A71;&#x9876;&#x70B9;&#x4E3A;0&#x3002;</span>
+        dist[i] = mMatrix[vs][i];  <span class="hljs-comment">// &#x9876;&#x70B9;i&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x4E3A;&quot;&#x9876;&#x70B9;vs&quot;&#x5230;&quot;&#x9876;&#x70B9;i&quot;&#x7684;&#x6743;&#x3002;</span>
+    }
+
+    <span class="hljs-comment">// &#x5BF9;&quot;&#x9876;&#x70B9;vs&quot;&#x81EA;&#x8EAB;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span>
+    flag[vs] = <span class="hljs-keyword">true</span>;
+    dist[vs] = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">// &#x904D;&#x5386;mVexs.length-1&#x6B21;&#xFF1B;&#x6BCF;&#x6B21;&#x627E;&#x51FA;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x3002;</span>
+    <span class="hljs-keyword">int</span> k=<span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; mVexs.length; i++) {
+        <span class="hljs-comment">// &#x5BFB;&#x627E;&#x5F53;&#x524D;&#x6700;&#x5C0F;&#x7684;&#x8DEF;&#x5F84;&#xFF1B;</span>
+        <span class="hljs-comment">// &#x5373;&#xFF0C;&#x5728;&#x672A;&#x83B7;&#x53D6;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x9876;&#x70B9;&#x4E2D;&#xFF0C;&#x627E;&#x5230;&#x79BB;vs&#x6700;&#x8FD1;&#x7684;&#x9876;&#x70B9;(k)&#x3002;</span>
+        <span class="hljs-keyword">int</span> min = INF;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; mVexs.length; j++) {
+            <span class="hljs-keyword">if</span> (flag[j]==<span class="hljs-keyword">false</span> &amp;&amp; dist[j]&lt;min) {
+                min = dist[j];
+                k = j;
+            }
+        }
+        <span class="hljs-comment">// &#x6807;&#x8BB0;&quot;&#x9876;&#x70B9;k&quot;&#x4E3A;&#x5DF2;&#x7ECF;&#x83B7;&#x53D6;&#x5230;&#x6700;&#x77ED;&#x8DEF;&#x5F84;</span>
+        flag[k] = <span class="hljs-keyword">true</span>;
+
+        <span class="hljs-comment">// &#x4FEE;&#x6B63;&#x5F53;&#x524D;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x548C;&#x524D;&#x9A71;&#x9876;&#x70B9;</span>
+        <span class="hljs-comment">// &#x5373;&#xFF0C;&#x5F53;&#x5DF2;&#x7ECF;&quot;&#x9876;&#x70B9;k&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&quot;&#x4E4B;&#x540E;&#xFF0C;&#x66F4;&#x65B0;&quot;&#x672A;&#x83B7;&#x53D6;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x9876;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x548C;&#x524D;&#x9A71;&#x9876;&#x70B9;&quot;&#x3002;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; mVexs.length; j++) {
+            <span class="hljs-keyword">int</span> tmp = (mMatrix[k][j]==INF ? INF : (min + mMatrix[k][j]));
+            <span class="hljs-keyword">if</span> (flag[j]==<span class="hljs-keyword">false</span> &amp;&amp; (tmp&lt;dist[j]) ) {
+                dist[j] = tmp;
+                prev[j] = k;
+            }
+        }
+    }
+
+    <span class="hljs-comment">// &#x6253;&#x5370;dijkstra&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x7ED3;&#x679C;</span>
+    System.out.printf(<span class="hljs-string">&quot;dijkstra(%c): \n&quot;</span>, mVexs[vs]);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i &lt; mVexs.length; i++)
+        System.out.printf(<span class="hljs-string">&quot;  shortest(%c, %c)=%d\n&quot;</span>, mVexs[vs], mVexs[i], dist[i]);
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ruheng.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modification Time&#xFF1A;
+2018-05-12 09:48:13
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Prim.html" class="navigation navigation-prev " aria-label="Previous page: Prim算法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Floyd.html" class="navigation navigation-next " aria-label="Next page: Floyd算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Dijkstra算法","level":"2.4.5","depth":2,"next":{"title":"Floyd算法","level":"2.4.6","depth":2,"path":"data-structure/graph/Floyd.md","ref":"data-structure/graph/Floyd.md","articles":[]},"previous":{"title":"Prim算法","level":"2.4.4","depth":2,"path":"data-structure/graph/Prim.md","ref":"data-structure/graph/Prim.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-livereload","search-plus@^0.0.11","github@^2.0.0","github-buttons@2.1.0","edit-link@^2.0.2","advanced-emoji@^0.2.1","anchors@^0.7.1","splitter@^0.0.8","tbfed-pagefooter@^0.0.1","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","favicon@^0.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © ruheng.com 2019","modify_label":"Modification Time：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/zxpei/record"},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"github-buttons":{"repo":"zxpei/record","types":["star"],"size":"small"},"expandable-chapters-small":{},"local-video":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/zxpei/record"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"zxp","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"record and improve","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"https://github.com/zxpei/record"}},"gitbook":"3.2.3","description":"up up up"},"file":{"path":"data-structure/graph/Dijkstra.md","mtime":"2018-05-12T01:48:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-02T03:32:21.545Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
