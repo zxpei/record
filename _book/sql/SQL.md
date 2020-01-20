@@ -1029,3 +1029,7 @@ UNION ALL
     SELECT name, SUM(daily_typing_pages)
         FROM employee_tbl GROUP BY name;
 ```
+
+- [SQL1](/sql/MySQL1.md)
+- [SQL2](/sql/MySQL2.md)
+- [SQL3](/sql/MySQL3.md)

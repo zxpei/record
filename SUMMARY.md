@@ -24,8 +24,10 @@
 
 ## data base
 
-* [SQL](sql/SQL.md)
-
+* [SQL](/sql/SQL.md)
+  * [SQL1](/sql/MySQL1.md)
+  * [SQL2](/sql/MySQL2.md)
+  * [SQL3](/sql/MySQL3.md)
 
 ## 算法
 
